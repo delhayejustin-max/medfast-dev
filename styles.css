@@ -16,6 +16,7 @@
   --shadow-soft: 0 28px 70px rgba(7, 23, 44, 0.35);
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
   --container: min(1120px, calc(100% - 48px));
   --section-pad: clamp(64px, 10vw, 100px);
 }
@@ -28,6 +29,14 @@
 
 html {
   scroll-behavior: smooth;
+  /* Décale le point d’arrêt du scroll sous le header sticky */
+  scroll-padding-top: clamp(4.25rem, 10vw, 5.5rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -88,30 +97,68 @@ ul {
   font-size: 0.95rem;
   border-radius: 999px;
   border: 2px solid transparent;
-  cursor: default;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+}
+
+.btn:active {
+  transform: translateY(1px);
 }
 
 .btn--primary {
   background: var(--teal);
   color: var(--white);
   border-color: var(--teal);
+  box-shadow: 0 2px 8px rgba(90, 155, 148, 0.35);
 }
 
 .btn--primary:hover {
   background: var(--teal-hover);
   border-color: var(--teal-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(10, 35, 66, 0.22);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(90, 155, 148, 0.35);
 }
 
 .btn--outline {
   background: transparent;
   color: var(--navy);
   border-color: var(--navy);
+  box-shadow: none;
 }
 
 .btn--outline:hover {
   background: var(--navy);
   color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(10, 35, 66, 0.18);
+}
+
+.btn--outline:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn--primary:hover,
+  .btn--outline:hover,
+  .btn:active {
+    transform: none;
+  }
 }
 
 .btn--sm {
@@ -234,7 +281,7 @@ ul {
 
 /* Hero — titre + iPad sur panneau bleu */
 .hero {
-  
+
 }
 
 .hero-showcase-inner {
@@ -290,13 +337,17 @@ ul {
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
-.hero-ipad-img {
+.hero-device-img {
   position: relative;
   z-index: 1;
   width: min(100%, 820px);
   height: auto;
   display: block;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
+}
+
+.hero-device-img--phone {
+  display: none;
 }
 
 /* Bandeau logos / public cible (même style visuel) */
@@ -453,6 +504,7 @@ ul {
 }
 
 .check-list {
+  padding: 25px 0;
   list-style: none;
   margin: 1.25rem 0 1.75rem;
 }
@@ -493,71 +545,87 @@ ul {
   opacity: 0.9;
 }
 
-/* Accordion */
+/* Cartes liste (maquette type accordéon, sans panneaux) */
 .why-cta-wrap {
   text-align: center;
   margin-bottom: 2.25rem;
 }
 
+.why-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
 .accordion {
-  max-width: 720px;
-  margin-inline: auto;
+  flex: 1 1 260px;
+  max-width: 520px;
+  min-width: min(100%, 260px);
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0;
 }
 
-.accordion-item {
+.accordion--boxed {
   background: var(--white);
-  border: 1px solid rgba(0, 29, 61, 0.12);
-  border-radius: var(--radius);
+  border: 1px solid #1a1a1a;
+  border-radius: 14px;
   overflow: hidden;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
 }
 
-.accordion-trigger {
-  width: 100%;
+.accordion-card-title {
+  margin: 0;
+  padding: 1.35rem 1.5rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.accordion-card-divider {
+  height: 1px;
+  margin: 0 1.25rem;
+  background: #e0e0e0;
+}
+
+.accordion-static-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-static-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1.15rem 1.35rem;
+  gap: 0.85rem;
+  padding: 1.35rem 1.5rem;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.accordion-static-row:last-child {
+  border-bottom: none;
+}
+
+.accordion-check {
+  flex-shrink: 0;
   font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: 600;
-  color: var(--navy);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-}
-
-.accordion-trigger:hover {
-  background: rgba(94, 140, 137, 0.06);
-}
-
-.accordion-icon {
-  font-size: 1.35rem;
-  font-weight: 400;
   line-height: 1;
-  color: var(--teal);
-  transition: transform 0.25s;
+  color: #000000;
 }
 
-.accordion-trigger[aria-expanded="true"] .accordion-icon {
-  transform: rotate(45deg);
-}
-
-.accordion-panel {
-  padding: 0 1.35rem 1.15rem;
-}
-
-.accordion-panel p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: var(--gray-600);
-}
-
-.accordion-panel[hidden] {
-  display: none;
+.accordion-label {
+  flex: 1;
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #000000;
 }
 
 /* Process */
@@ -616,7 +684,6 @@ ul {
 .pill-frame {
   width: min(480px, 100%);
   aspect-ratio: 1;
-  background: var(--gray-100);
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
@@ -699,7 +766,34 @@ ul {
 
   .process-head {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .process-head .section-title.section-title--left {
+    text-align: center;
+  }
+
+  .process-signup {
+    margin-inline: auto;
+  }
+
+  .split__text {
+    text-align: center;
+  }
+
+  .split__text .section-title--left {
+    text-align: center;
+  }
+
+  .split__text .check-list {
+    text-align: left;
+    margin-inline: auto;
+    max-width: 40rem;
+  }
+
+  .split__text .btn {
+    margin-inline: auto;
   }
 
   .process-num {
@@ -797,6 +891,16 @@ ul {
   .hero-blue-panel {
     top: 11%;
     bottom: 11%;
+  }
+
+  .hero-device-img--tablet {
+    display: none;
+  }
+
+  .hero-device-img--phone {
+    display: block;
+    width: min(100%, 340px);
+    margin-inline: auto;
   }
 
   .grid--4 {

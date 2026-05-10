@@ -6,29 +6,29 @@
   <title>MedFast — Santé à portée de main</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="logo">MedFast<span class="logo-dot">.</span></a>
+      <a href="#accueil" class="logo">MedFast<span class="logo-dot">.</span></a>
       <button type="button" class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <nav class="main-nav" aria-label="Navigation principale">
         <ul>
-          <li><a href="#">Solution</a></li>
-          <li><a href="#">Pourquoi MedFast </a></li>
-          <li><a href="#">Comment ça marche </a></li>
+          <li><a href="#solution">Solution</a></li>
+          <li><a href="#pourquoi-medfast">Pourquoi MedFast</a></li>
+          <li><a href="#comment-ca-marche">Comment ça marche</a></li>
         </ul>
       </nav>
-      <a href="#" class="btn btn--sm btn--primary header-cta">Découvrir MedFast</a>
+      <a href="#solution" class="btn btn--sm btn--primary header-cta">Découvrir MedFast</a>
     </div>
   </header>
 
   <main>
-    <section class="hero hero--showcase" aria-labelledby="hero-brand-heading">
+    <section id="accueil" class="hero hero--showcase" aria-labelledby="hero-brand-heading">
       <div class="container hero-showcase-inner">
         <h1 id="hero-brand-heading" class="hero-brand-title">
           MedFast<span class="hero-brand-dot">.</span>
@@ -38,11 +38,19 @@
         <div class="hero-blue-panel" aria-hidden="true"></div>
         <div class="hero-device-wrap">
           <img
-            class="hero-ipad-img"
+            class="hero-device-img hero-device-img--tablet"
             src="images/Ipad.png"
-            alt="Aperçu de l’application MedFast sur iPad"
+            alt="Aperçu de l’application MedFast sur tablette"
             width="1200"
             height="900"
+            decoding="async"
+          />
+          <img
+            class="hero-device-img hero-device-img--phone"
+            src="images/iPhone.png"
+            alt="Aperçu de l’application MedFast sur téléphone"
+            width="600"
+            height="1200"
             decoding="async"
           />
         </div>
@@ -62,7 +70,7 @@
       </div>
     </section>
 
-    <section class="section section--pharmacist">
+    <section id="solution" class="section section--pharmacist">
       <div class="container">
         <h2 class="section-title">Besoin urgent d’un médicament ?</h2>
         <p class="section-lead">
@@ -132,46 +140,85 @@
       </div>
     </section>
 
-    <section class="section section--why section--muted">
+    <section id="pourquoi-medfast" class="section section--why section--muted">
       <div class="container">
         <h2 class="section-title">Pourquoi choisir MedFast&nbsp;?</h2>
-        <p>MedFast ne remplace ni la pharmacie ni le soin. Le service agit comme un intermédiaire logistique et digital qui facilite l’accès rapide à des produits de santé de première intention.</p>
+        <p class="section-lead">MedFast ne remplace ni la pharmacie ni le soin. Le service agit comme un intermédiaire logistique et digital qui facilite l’accès rapide à des produits de santé de première intention.</p>
         <div class="why-cta-wrap">
           <a href="#" class="btn btn--outline">En savoir plus</a>
         </div>
 
-        <div class="accordion" role="region" aria-label="Avantages MedFast">
-          <div class="accordion-item">
-            <button type="button" class="accordion-trigger" aria-expanded="false" id="acc1" aria-controls="panel1">
-              <span>Service</span>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-panel" id="panel1" role="region" aria-labelledby="acc1" hidden>
-              <p>Horaires étendus, interface simple et équipe joignable pour vos questions du quotidien.</p>
-            </div>
+        <div class="why-cards">
+          <div class="accordion accordion--boxed accordion--static" role="region" aria-labelledby="benefit-card-medfast">
+            <h3 id="benefit-card-medfast" class="accordion-card-title">MedFast</h3>
+            <div class="accordion-card-divider" aria-hidden="true"></div>
+            <ul class="accordion-static-list">
+              <li class="accordion-static-row">
+                <span class="accordion-check" aria-hidden="true">✓</span>
+                <span class="accordion-label">Accès 24/7</span>
+              </li>
+              <li class="accordion-static-row">
+                <span class="accordion-check" aria-hidden="true">✓</span>
+                <span class="accordion-label">Livraison à domicile</span>
+              </li>
+              <li class="accordion-static-row">
+                <span class="accordion-check" aria-hidden="true">✓</span>
+                <span class="accordion-label">Gain de temps</span>
+              </li>
+              <li class="accordion-static-row">
+                <span class="accordion-check" aria-hidden="true">✓</span>
+                <span class="accordion-label">Confort</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="accordion-item">
-            <button type="button" class="accordion-trigger" aria-expanded="false" id="acc2" aria-controls="panel2">
-              <span>Qualité</span>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-panel" id="panel2" role="region" aria-labelledby="acc2" hidden>
-              <p>Produits issus de circuits officiels, traçabilité et conservation conformes aux normes.</p>
-            </div>
+          <div class="accordion accordion--boxed accordion--static" role="region" aria-labelledby="benefit-card-pharmacies">
+            <h3 id="benefit-card-pharmacies" class="accordion-card-title">Pharmacies</h3>
+            <div class="accordion-card-divider" aria-hidden="true"></div>
+            <ul class="accordion-static-list">
+              <li class="accordion-static-row">
+                <span class="accordion-check" aria-hidden="true">✗</span>
+                <span class="accordion-label">Accès 24/7</span>
+              </li>
+              <li class="accordion-static-row">
+                <span class="accordion-check" aria-hidden="true">✗</span>
+                <span class="accordion-label">Livraison à domicile</span>
+              </li>
+              <li class="accordion-static-row">
+                <span class="accordion-check" aria-hidden="true">✗</span>
+                <span class="accordion-label">Gain de temps</span>
+              </li>
+              <li class="accordion-static-row">
+                <span class="accordion-check" aria-hidden="true">✗</span>
+                <span class="accordion-label">Confort</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="accordion-item">
-            <button type="button" class="accordion-trigger" aria-expanded="false" id="acc3" aria-controls="panel3">
-              <span>Sécurité</span>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-panel" id="panel3" role="region" aria-labelledby="acc3" hidden>
-              <p>Données de santé protégées, authentification renforcée et pharmacien responsable.</p>
-            </div>
+          <div class="accordion accordion--boxed accordion--static" role="region" aria-labelledby="benefit-card-urgences">
+            <h3 id="benefit-card-urgences" class="accordion-card-title">Urgences</h3>
+            <div class="accordion-card-divider" aria-hidden="true"></div>
+            <ul class="accordion-static-list">
+              <li class="accordion-static-row">
+                <span class="accordion-check" aria-hidden="true">✓</span>
+                <span class="accordion-label">Accès 24/7</span>
+              </li>
+              <li class="accordion-static-row">
+                <span class="accordion-check" aria-hidden="true">✗</span>
+                <span class="accordion-label">Livraison à domicile</span>
+              </li>
+              <li class="accordion-static-row">
+                <span class="accordion-check" aria-hidden="true">✗</span>
+                <span class="accordion-label">Gain de temps</span>
+              </li>
+              <li class="accordion-static-row">
+                <span class="accordion-check" aria-hidden="true">✗</span>
+                <span class="accordion-label">Confort</span>
+              </li>
+            </ul>
           </div>
-
         </div>
+
       </div>
     </section>
 
@@ -189,7 +236,7 @@
       </div>
     </section>
 
-    <section class="section section--process">
+    <section id="comment-ca-marche" class="section section--process">
       <div class="container">
         <div class="process-head">
           <h2 class="section-title section-title--left">Comment ça marche&nbsp;?</h2>
@@ -236,8 +283,8 @@
 
   <footer class="site-footer">
     <div class="container footer-bottom">
-      <p class="logo logo--small">MedFast<span class="logo-dot">.</span></p>
-      <p class="copyright text-muted">Maquette statique — fins de démonstration.</p>
+      <p class="logo logo--small">© MedFast 2026<span class="logo-dot">.</span></p>
+      <p class="copyright text-muted">Maquette statique — Fins de démonstration.</p>
     </div>
   </footer>
 
