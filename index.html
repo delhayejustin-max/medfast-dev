@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MedFast — Santé à portée de main</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">MedFast<span class="logo-dot">.</span></a>
+      <button type="button" class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#">Solution</a></li>
+          <li><a href="#">Pourquoi MedFast </a></li>
+          <li><a href="#">Comment ça marche </a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn--sm btn--primary header-cta">Découvrir MedFast</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--showcase" aria-labelledby="hero-brand-heading">
+      <div class="container hero-showcase-inner">
+        <h1 id="hero-brand-heading" class="hero-brand-title">
+          MedFast<span class="hero-brand-dot">.</span>
+        </h1>
+      </div>
+      <div class="hero-device-stage">
+        <div class="hero-blue-panel" aria-hidden="true"></div>
+        <div class="hero-device-wrap">
+          <img
+            class="hero-ipad-img"
+            src="images/Ipad.png"
+            alt="Aperçu de l’application MedFast sur iPad"
+            width="1200"
+            height="900"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="partners partners--audience" aria-labelledby="audience-heading">
+      <div class="container partners-stack">
+        <h2 id="audience-heading" class="partners-heading">Une solution pensée pour vous</h2>
+        <div class="partners-row">
+          <span class="partner-logo">Familles et parents pressés</span>
+          <span class="partner-logo">Seniors et personnes isolées</span>
+          <span class="partner-logo">Salariés peu disponibles le jour</span>
+          <span class="partner-logo">Mobilité réduite ou contrainte</span>
+          <span class="partner-logo">Besoin urgentla nuit ou le week-end</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--pharmacist">
+      <div class="container">
+        <h2 class="section-title">Besoin urgent d’un médicament ?</h2>
+        <p class="section-lead">
+          Lorsqu’un besoin de santé survient à domicile, la difficulté n’est pas toujours la gravité du problème, mais l’accès rapide à une solution simple, fiable et rassurante.
+        </p>
+        <div class="grid grid--4">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M24 8v32M8 24h32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Accès rapide aux produits essentiels</h3>
+            <p>Commandez des médicaments sans ordonnance et des produits de santé du quotidien directement depuis l’application ou le site.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M12 28h24l-4 12H16l-4-12z" stroke="currentColor" stroke-width="2"/><path d="M18 28V18a6 6 0 1112 0v10" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>Livraison 24/7</h3>
+            <p>MedFast a été pensé pour répondre aux besoins qui surviennent en dehors des horaires classiques : nuit, week-end et jours fériés.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="14" width="28" height="22" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 20h16M16 26h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Parcours simple et rassurant</h3>
+            <p>L’utilisateur n’a pas besoin de chercher une pharmacie ouverte ni d’organiser lui-même le déplacement. Tout est centralisé dans un seul service.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M24 40c8-6 14-12 14-20a14 14 0 10-28 0c0 8 6 14 14 20z" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="20" r="4" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>Sécurité et traçabilité</h3>
+            <p>Les commandes sont préparées par des pharmacies partenaires agréées, puis livrées selon un parcours clair et encadré.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner-img">
+      <div class="container">
+        <figure class="rounded-photo">
+          <img src=".\images\need 1.png" alt="" width="1400" height="560" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--urgency">
+      <div class="container split">
+        <div class="split__text">
+          <h2 class="section-title section-title--left">Une urgence bénigne ne devrait pas devenir une nuit entière aux urgences.</h2>
+          <p>
+            MedFast répond à un manque concret : lorsqu’une personne a besoin rapidement d’un antihistaminique, d’un antalgique, d’un produit pour bébé ou d’un médicament de première intention, l’absence d’accès immédiat peut transformer une situation simple en parcours lourd, stressant et inutilement compliqué.
+          </p>
+          <ul class="check-list">
+            <li>Gagner du temps <br /> Éviter les recherches, les appels inutiles et les déplacements en pleine nuit.</li>
+            <li>Rester à domicile <br /> Une vraie valeur pour les personnes malades, seules, âgées ou avec un enfant à la maison.</li>
+            <li>Mieux orienter les besoins bénins <br />Toutes les situations ne nécessitent pas un passage aux urgences.</li>
+            <li>Simplifier un moment de stress <br />Une interface claire permet de commander rapidement, avec plus de lisibilité et moins d’angoisse.</li>
+          </ul>
+          <a href="#" class="btn btn--primary">Commander maintenant</a>
+        </div>
+        <div class="split__visual split__visual--heart" aria-hidden="true">
+          <figure class="split__figure">
+            <img src=".\images\Image2.png" alt="" width="640" height="800" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--why section--muted">
+      <div class="container">
+        <h2 class="section-title">Pourquoi choisir MedFast&nbsp;?</h2>
+        <p>MedFast ne remplace ni la pharmacie ni le soin. Le service agit comme un intermédiaire logistique et digital qui facilite l’accès rapide à des produits de santé de première intention.</p>
+        <div class="why-cta-wrap">
+          <a href="#" class="btn btn--outline">En savoir plus</a>
+        </div>
+
+        <div class="accordion" role="region" aria-label="Avantages MedFast">
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false" id="acc1" aria-controls="panel1">
+              <span>Service</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-panel" id="panel1" role="region" aria-labelledby="acc1" hidden>
+              <p>Horaires étendus, interface simple et équipe joignable pour vos questions du quotidien.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false" id="acc2" aria-controls="panel2">
+              <span>Qualité</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-panel" id="panel2" role="region" aria-labelledby="acc2" hidden>
+              <p>Produits issus de circuits officiels, traçabilité et conservation conformes aux normes.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false" id="acc3" aria-controls="panel3">
+              <span>Sécurité</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-panel" id="panel3" role="region" aria-labelledby="acc3" hidden>
+              <p>Données de santé protégées, authentification renforcée et pharmacien responsable.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--feature-split">
+      <div class="container split split--reverse-mobile">
+        <figure class="rounded-photo split__figure">
+          <img src=".\images\Image.png" alt="" width="640" height="800" loading="lazy" />
+        </figure>
+        <div class="split__text">
+          <h2 class="section-title section-title--left">Pourquoi MedFast est né ? </h2>
+          <p>
+            L’idée est née d’une expérience personnelle vécue en pleine nuit : un besoin réel, simple à traiter, mais sans solution rapide à domicile. C’est ce décalage entre l’urgence ressentie et l’absence de service adapté qui a donné naissance à MedFast.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--process">
+      <div class="container">
+        <div class="process-head">
+          <h2 class="section-title section-title--left">Comment ça marche&nbsp;?</h2>
+          <a href="#" class="btn btn--outline process-signup">En savoir plus </a>
+        </div>
+        <div class="grid grid--3 process-grid">
+          <article class="process-step">
+            <span class="process-num">01</span>
+            <h3>Choisissez vos produits</h3>
+            <p>L’utilisateur ouvre l’application ou le site, sélectionne les produits nécessaires et visualise rapidement les options disponibles.</p>
+          </article>
+          <article class="process-step">
+            <span class="process-num">02</span>
+            <h3>La pharmacie prépare la commande</h3>
+            <p>Une pharmacie partenaire prend en charge la demande, valide la disponibilité des produits et prépare la commande..</p>
+          </article>
+          <article class="process-step">
+            <span class="process-num">03</span>
+            <h3>Recevez votre commande à domicile</h3>
+            <p>Un coursier livre la commande dans le délai annoncé, avec un parcours simple, rapide et traçable.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pill-showcase">
+      <div class="container pill-showcase-inner">
+        <div class="pill-frame">
+          <img src=".\images\ChatGPT Image May 4, 2026 at 11_13_25 AM 1.png" alt="" width="600" height="600" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-cta">
+      <div class="container footer-cta-inner">
+        <h2 class="footer-cta-title">Une solution pensée pour les besoins de santé du quotidien</h2>
+        <p class="footer-cta-lead text-muted">
+          MedFast imagine une nouvelle façon d’accéder rapidement à des produits de première intention, grâce à une plateforme simple, une logistique réactive et des pharmacies partenaires.
+        </p>
+        <a href="#" class="btn btn--primary btn--wide">Commencer maintenant</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p class="logo logo--small">MedFast<span class="logo-dot">.</span></p>
+      <p class="copyright text-muted">Maquette statique — fins de démonstration.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
