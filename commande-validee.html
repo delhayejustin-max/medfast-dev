@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commande validée — MedFast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-confirm">
+  <header class="catalog-header">
+    <div class="catalog-header-inner">
+      <a href="recapitulatif.html" class="catalog-back">← Récapitulatif</a>
+    </div>
+  </header>
+
+  <main class="confirm-main" id="commande-validee">
+    <div class="confirm-wrap">
+      <header class="confirm-head">
+        <p class="confirm-logo">MedFast<span class="catalog-logo-dot">.</span></p>
+        <h1 class="confirm-title">Commande validée</h1>
+        <p class="confirm-subtitle">
+          Votre commande est en cours de préparation et de livraison
+        </p>
+      </header>
+
+      <form class="confirm-search" role="search" action="#" method="get">
+        <label class="visually-hidden" for="confirm-q">Rechercher un produit de santé</label>
+        <input
+          id="confirm-q"
+          class="confirm-search-input"
+          type="search"
+          name="q"
+          placeholder="Rechercher un produit de santé"
+          autocomplete="off"
+        />
+      </form>
+
+      <div class="confirm-blocks">
+        <section class="recap-card confirm-card" aria-labelledby="confirm-track-heading">
+          <h2 id="confirm-track-heading" class="confirm-card-title">Suivi de livraison</h2>
+          <ol class="confirm-steps">
+            <li class="confirm-step">
+              <span class="confirm-step-label">1. Pharmacie confirmée</span>
+              <p class="confirm-step-desc">La commande a bien été reçue</p>
+            </li>
+            <li class="confirm-step">
+              <span class="confirm-step-label">2. Préparation en cours</span>
+              <p class="confirm-step-desc">Les produits sont en cours de préparation</p>
+            </li>
+            <li class="confirm-step">
+              <span class="confirm-step-label">3. Coursier en route</span>
+              <p class="confirm-step-desc">La livraison est en cours</p>
+            </li>
+            <li class="confirm-step confirm-step--compact">
+              <span class="confirm-step-label">4. Arrivée estimée&nbsp;: 18 min</span>
+            </li>
+          </ol>
+        </section>
+
+        <div class="confirm-row">
+          <section class="recap-card confirm-card" aria-labelledby="confirm-order-heading">
+            <h2 id="confirm-order-heading" class="confirm-card-title">Votre commande&nbsp;:</h2>
+            <ul class="confirm-order-list">
+              <li>Antihistaminique</li>
+              <li>Gel apaisant</li>
+            </ul>
+          </section>
+
+          <section class="recap-card confirm-card" aria-labelledby="confirm-addr-heading">
+            <h2 id="confirm-addr-heading" class="confirm-card-title">Adresse de livraison</h2>
+            <p class="confirm-address">12 rue de Luxembourg, Luxembourg</p>
+          </section>
+        </div>
+      </div>
+
+      <a href="#" class="recap-cta confirm-cta">
+        Suivre la livraison
+        <span class="catalog-cta-icon" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

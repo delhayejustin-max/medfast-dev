@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commander — MedFast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-commander">
+  <header class="catalog-header">
+    <div class="catalog-header-inner">
+      <a href="index.html" class="catalog-back">← Accueil</a>
+    </div>
+  </header>
+
+  <main class="catalog-main" id="commander">
+    <div class="catalog-wrap">
+      <h1 class="catalog-logo">MedFast<span class="catalog-logo-dot">.</span></h1>
+      <p class="catalog-greet">Bonjour Monsieur/Madame</p>
+      <p class="catalog-prompt">De quoi avez-vous besoin aujourd’hui&nbsp;?</p>
+
+      <form class="catalog-search" role="search" action="#" method="get">
+        <label class="visually-hidden" for="catalog-q">Rechercher un produit de santé</label>
+        <input
+          id="catalog-q"
+          class="catalog-search-input"
+          type="search"
+          name="q"
+          placeholder="Rechercher un produit de santé"
+          autocomplete="off"
+        />
+      </form>
+
+      <p class="catalog-delivery">Livraison disponible 24h/24 – 7j/7</p>
+
+      <ul class="catalog-grid">
+        <li>
+          <a href="#" class="catalog-tile">
+            <span class="catalog-tile-title">Douleur &amp; fièvre</span>
+            <span class="catalog-tile-desc">Paracétamol, antalgiques</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="catalog-tile">
+            <span class="catalog-tile-title">Allergies</span>
+            <span class="catalog-tile-desc">Antihistaminiques, gels apaisants</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="catalog-tile">
+            <span class="catalog-tile-title">Bébé &amp; nourrisson</span>
+            <span class="catalog-tile-desc">Fièvre, digestion, soins bébé</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="catalog-tile">
+            <span class="catalog-tile-title">Premiers soins</span>
+            <span class="catalog-tile-desc">Désinfection, pansements, gel</span>
+          </a>
+        </li>
+      </ul>
+
+      <a href="recapitulatif.html" class="catalog-cta">
+        Voir ma commande
+        <span class="catalog-cta-icon" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

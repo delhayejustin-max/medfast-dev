@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Votre commande — MedFast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-recap">
+  <header class="catalog-header">
+    <div class="catalog-header-inner">
+      <a href="commander.html" class="catalog-back">← Catalogue</a>
+    </div>
+  </header>
+
+  <main class="recap-main" id="recapitulatif">
+    <div class="recap-wrap">
+      <header class="recap-head">
+        <p class="recap-logo">MedFast<span class="catalog-logo-dot">.</span></p>
+        <h1 class="recap-title">Votre commande</h1>
+        <p class="recap-subtitle">Vérifiez votre panier avant de valider</p>
+      </header>
+
+      <div class="recap-stack">
+        <section class="recap-card recap-items" aria-labelledby="recap-items-heading">
+          <h3 id="recap-items-heading" class="visually-hidden">Articles</h3>
+          <ul class="recap-lines recap-lines--plain">
+            <li class="recap-line">
+              <span class="recap-line-label">Antihistaminique x1</span>
+              <span class="recap-line-leader" aria-hidden="true"></span>
+              <span class="recap-line-value">7,90&nbsp;€</span>
+            </li>
+            <li class="recap-line">
+              <span class="recap-line-label">Gel apaisant x1</span>
+              <span class="recap-line-leader" aria-hidden="true"></span>
+              <span class="recap-line-value">6,90&nbsp;€</span>
+            </li>
+          </ul>
+        </section>
+
+        <aside class="recap-aside" aria-label="Montants et validation">
+          <section class="recap-card recap-totals" aria-labelledby="recap-totals-heading">
+            <h3 id="recap-totals-heading" class="visually-hidden">Détail des prix</h3>
+            <ul class="recap-lines recap-lines--dotted">
+              <li class="recap-line">
+                <span class="recap-line-label">Produits</span>
+                <span class="recap-line-leader" aria-hidden="true"></span>
+                <span class="recap-line-value">14,80&nbsp;€</span>
+              </li>
+              <li class="recap-line">
+                <span class="recap-line-label">Livraison</span>
+                <span class="recap-line-leader" aria-hidden="true"></span>
+                <span class="recap-line-value">11,90&nbsp;€</span>
+              </li>
+              <li class="recap-line">
+                <span class="recap-line-label">Frais de service</span>
+                <span class="recap-line-leader" aria-hidden="true"></span>
+                <span class="recap-line-value">2,00&nbsp;€</span>
+              </li>
+              <li class="recap-line">
+                <span class="recap-line-label">Supplément nuit</span>
+                <span class="recap-line-leader" aria-hidden="true"></span>
+                <span class="recap-line-value">3,00&nbsp;€</span>
+              </li>
+              <li class="recap-line recap-line--total">
+                <span class="recap-line-label">Total</span>
+                <span class="recap-line-leader" aria-hidden="true"></span>
+                <span class="recap-line-value">31,70&nbsp;€</span>
+              </li>
+            </ul>
+          </section>
+          <a href="commande-validee.html" class="recap-cta">
+            Valider la commande
+            <span class="catalog-cta-icon" aria-hidden="true">↗</span>
+          </a>
+        </aside>
+
+        <section class="recap-card recap-address" aria-labelledby="recap-addr-heading">
+          <h3 id="recap-addr-heading" class="recap-card-heading">Adresse de livraison&nbsp;:</h3>
+          <p class="recap-card-body">12 rue de Luxembourg, Luxembourg</p>
+        </section>
+
+        <section class="recap-card recap-payment" aria-labelledby="recap-pay-heading">
+          <h3 id="recap-pay-heading" class="recap-card-heading">Paiement</h3>
+          <p class="recap-card-body">Visa •••• 2048</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
